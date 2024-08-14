@@ -15,7 +15,7 @@
 </ul>
 
 <p>Пожалуйста авторизуйтесь</p>
-<form action="{{ route('auth') }}" method="post" novalidate>
+<form action="{{ route('auth') }}" method="post">
   @csrf
   <div class="form-floating">
     <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\RegController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CurrencyApiController;
+use App\Http\Controllers\CurrencyConverterController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +20,8 @@ Route::get('/reg', [RegController::class,'create'])->middleware('guest')->name('
 Route::post('/reg', [RegController::class, 'store'])->middleware('guest');
 
 
-Route::get('/user', function () {
-    return view('user');
-})->middleware('auth')->name('user');
+Route::get('/user', function () {return view('user');})->middleware('auth')->name('user');
+
+Route::get('/currencies', [CurrencyApiController::class, 'getCurrencies'])->middleware('auth')->name('currency');
+
+Route::get('/convert', [CurrencyConverterController::class, 'index'])->middleware('auth')->name('convert');

@@ -16,7 +16,7 @@
     @endforeach
 </ul>
 
-<form action="{{ route('reg') }}" method="post" novalidate>
+<form action="{{ route('reg') }}" method="post">
     @csrf
     <div class="form-floating">
       <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
