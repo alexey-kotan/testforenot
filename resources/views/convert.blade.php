@@ -27,7 +27,7 @@
         </form>
 
         <div class="mt-4">
-            <p>Результат конвертации: <span id="result"></span></p>
+            <p>Результат конвертации: <b><span id="result"></span></b></p>
         </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
